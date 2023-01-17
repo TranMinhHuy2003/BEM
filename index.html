@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="toast"></div>
+
+    <div>
+        <div onclick = "showSuccesstoast();" class="btn btn--success">Show Success</div>
+        <div onclick = "showErrortoast();" class="btn btn--error">Show Error</div>
+        <div onclick = "showInfotoast();" class="btn btn--info">Show Info</div>
+        <div onclick = "showWarningtoast();" class="btn btn--warning">Show Warning</div>
+    </div>
+
+    <script language="javascript" src="toast.js"></script>
+
+    <script>    
+        function showSuccesstoast() {
+            toast({
+                title: 'Thành công!',
+                message: 'Chúc mừng, bạn đã đăng nhập thành công!',
+                type: 'success',
+                duration: 2000
+            });
+        }
+        function showErrortoast () {
+            toast({
+                title: 'Thất bại!',
+                message: 'Đã có lỗi xảy ra, vui lòng thử lại!',
+                type: 'error',
+                duration: 2000
+            });
+        }
+        function showInfotoast () {
+            toast({
+                title: 'Thành công!',
+                message: 'Đây là thông tin bạn cần!',
+                type: 'info',
+                duration: 2000
+            });
+        }
+        function showWarningtoast () {
+            toast({
+                title: 'Cảnh báo!',
+                message: 'Bạn đã vi phạm tiêu chuẩn cộng đồng!',
+                type: 'warning',
+                duration: 2000
+            });
+        }
+    </script>
+</body>
+</html>
